@@ -32,7 +32,16 @@ function BusTravelWidget() {
 
     }
 
-    function startLocation() {
+    function startLocation(value) {
+        if (value === "Dunoon") {
+            return 25;
+        }
+        if (value === "Khayelitsha") {
+        return 40;
+        }
+        if (value === "Mitchells Plain") {
+          return 30;
+        } 
 
     }
 
