@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bus-travel-widget</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+        background-image: url("back.jpg");
+    }
+</style>
+
+<body>
+    <section class="busTravelInfo">
+
+        <h1>Bus Travel Widget</h1>
+        <br>
+        <label for="">Points</label>
+        <input class="Points" value="" type="number" placeholder="eg. 3.33">
+        <br>
+        <br>
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">Start Location</button>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="#Mitchells Plain">Mitchells Plain</a>
+              <a href="#Dunoon">Dunoon</a>
+              <a href="#Khayelitsha">Khayelitsha</a>
+            </div>
+          </div>
+        <br>
+        <div class="itemRadio">
+            <h4>Travel Times</h4>
+            <label class="travelTimesRadio">
+                <input type="radio" name="travelTimes" class="itemTypeRadio" value="Peak">
+                <span class="label-body">Peak</span>
+            </label>
+<br>
+            <label class="travelTimesRadio">
+                <input type="radio" name="travelTimes" class="itemTypeRadio" value="Off-Peak">
+                <span class="label-body">Off-Peak</span>
+            </label>
+        </div>
+        <br>
+        <input type="checkbox" class="returnTrip" name="returnTripCheckbox" value="Return Trip">
+        <label for="returnTrip">Return Trip</label><br>
+        <br>
+        <button class="calculateBtn" type="button">Calculate</button>
+
+
+    </section>
+
+
+
+    <section class="Calculations">
+
+        <h1>Calculations</h1>
+
+        <table>
+            <tr>
+                <td>Number of single trips</td>
+                <td>R<span class="numberSingleTrips">0</span> </td>
+            </tr>
+
+            <tr>
+                <td>Price per trip(single)</td>
+                <td>R<span class="pricePerTripSingle">0</span> </td>
+            </tr>
+
+            <tr>
+                <td>Number of return trips</td>
+                <td>R<span class="numberReturnTrips">0</span> </td>
+            </tr>
+
+            <tr>
+                <td>Price per trip(return)</td>
+                <td>R<span class="pricePerTripReturn">0</span> </td>
+            </tr>
+        </table>
+
+    </section>
+    <script src="script.js"></script>
+    <script src="dom.js"></script>
+
+</body>
+
+</html>
