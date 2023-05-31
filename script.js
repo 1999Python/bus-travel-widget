@@ -1,13 +1,12 @@
 function BusTravelWidget() {
-
+   var locationAmount = 0;
+   var singleTrip = 0;
 
     var billTotal = 0;
 
-    let location = {"Dunoon": 25, "Khayelitsha": 40, "MitchellsPlain": 30}
+    let location = {"Dunoon": 25, "Khayelitsha": 40, "Mitchells Plain": 30}
 
-    function points() {
-
-        let location = {"Dunoon": 25, "Khayelitsha": 40, "MitchellsPlain": 30}
+    function pointsFunction() {
 
         let dropdowns = "";
 
@@ -33,20 +32,24 @@ function BusTravelWidget() {
     }
 
     function startLocation(value) {
-        if (value === "Dunoon") {
-            return 25;
-        }
-        if (value === "Khayelitsha") {
-        return 40;
-        }
-        if (value === "Mitchells Plain") {
-          return 30;
-        } 
+    
+       locationAmount = value
+       return locationAmount
 
     }
 
+ 
     function numberSingleTrips() {
-        pricePerTripSingle() % 1;
+      
+            if (locationAmount === "Dunoon") {
+                singleTrip = points /25;
+            }
+            if (locationAmount === "Mitchells Plain") {
+                singleTrip = points /30;
+            }
+            if (locationAmount === "Khayelitsha") {
+                singleTrip = points /40;
+            }
      }
 
     function pricePerTripSingle() {
@@ -70,7 +73,7 @@ function BusTravelWidget() {
 
 
     return {
-        points,
+        pointsFunction,
         returnTrip,
         peakValue,
         offPeakValue,
