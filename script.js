@@ -6,8 +6,7 @@ function BusTravelWidget() {
     var singleReturn = 0;
     var totalReturn = 0;
   
-
-    let location = { "Dunoon": 25, "Khayelitsha": 40, "Mitchells Plain": 30 }
+let location = { "Dunoon": 25, "Khayelitsha": 40, "Mitchells Plain": 30 }// the cost of the trips for specefic locations 
 
     function pointsFunction() {
 //trying to get the amount of points for the location chosen (for in looping)

@@ -1,7 +1,7 @@
 //Selecting all the elements and buttons
 
 const Points = document.querySelector(".Points");
-//An amount of points
+//An amount of points R40 for Khayelitsha R25 for Dunoon R30 for  Mitchells Plain
 
 const dropdowns = document.querySelector(".dropdown-content");
 //This is a separate function on its own this drop down button will select which loacation she starts at.
@@ -10,7 +10,7 @@ const itemTypeRadio = document.querySelector(".itemTypeRadio");
 //radio buttons select either Peak or off peak
 
 const returnTripCheckbox = document.querySelector(".returnTripCheckbox");
-//checkbox for return trips oly selected if she had a return trip
+//checkbox for return trips only selected if she had a return trip
 
 const calculateBtn = document.querySelector(".calculateBtn");
 //calculate button
@@ -34,7 +34,7 @@ const busTravelWidget = BusTravelWidget();//factory function
 //The cost price per trip (single)
 //The number of return trips she can make
 //The cost per return trip
-function mainfunctionTotals(){
+function mainfunctionTotals() {
     pricePerTripReturn.innerHTML = busTravelWidget.pricePerTripReturn();
     numberReturnTrips.innerHTML = busTravelWidget.numberReturnTrips();
     pricePerTripSingle.innerHTML = busTravelWidget.pricePerTripSingle();
@@ -67,7 +67,7 @@ itemTypeRadio.addEventListener("click", TravelTimes);//event listener for the ra
 ///////////////////////////////////////////////////////////////////////////////
 function returnTripFunc() {
     var checkedBoxBtn = document.querySelector("input[name='returnTripCheckbox']:checked");
-//What I am trying to say is that if the checked box is seleceted it should return a value of return trips
+    //What I am trying to say is that if the checked box is seleceted it should return a value of return trips
 
     if (checkedBoxBtn) {
         if (checkedBoxBtn.value === "Return Trip") {

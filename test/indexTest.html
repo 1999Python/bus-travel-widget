@@ -1,28 +1,47 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>electricity App Test</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mocha-test</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js" charset="utf-8"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.min.js"></script>
+    <style>
+        h1{
+            font-size: large;
+            font-family: 'Courier New', Courier, monospace;
+        }  
+        body{
+            background-image: url("background.jpg");
+        }
+        #head{
+            font-size: 2.5em;
+            margin-left: 15em;
+            font-style: oblique;
+        }
+    </style>
 </head>
-
 <body>
-    <div id="mocha"></div>
+    <h1 id="head">busTravelWidget App Test</h1>
+   <div id="mocha"></div>
     <script>
+        // the mocha test style to use - we use BDD - Behviour Driven Development
         mocha.setup('bdd');
+        //ensure the assert function is available
         var assert = chai.assert;
     </script>
+ <script src="/dom.js" charset="utf-8"></script>
+  <script src="/test/mocha.js" charset="utf-8"></script>
 
-    <script src="mocha.js" charset="utf-8"></script>
-    <script src="script.js" charset="utf-8"></script>
-	
     <script>
+        
+        // configure and run mocha
         mocha.checkLeaks();
         mocha.run();
     </script>
 </body>
-
 </html>
+
+
