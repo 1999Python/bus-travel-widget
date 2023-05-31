@@ -11,18 +11,10 @@ function BusTravelWidget() {
 
         let dropdowns = "";
 
-        for (let Dunoon in location) {
-            dropdowns += location[Dunoon];
-        }
+        for (let key in location) {
+            dropdowns += location[key];
+          }
 
-        for (let Khayelitsha in location) {
-            dropdowns += location[Khayelitsha];
-        }
-
-        for (let MitchellsPlain in location) {
-            dropdowns += location[MitchellsPlain];
-        }
-        
     }
 
     function returnTrip() {
